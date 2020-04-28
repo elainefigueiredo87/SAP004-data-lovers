@@ -1,19 +1,33 @@
 import data from './data/rickandmorty/rickandmorty.js';
 //console.log(data);
-//function com for para rodar o loop dentro do results do arquivo de data 
 function listCharacters(characters){
       let character;
       let arrayCharacters=[];
       for(character of characters){ 
         arrayCharacters.push(character);
       }
-      console.log(arrayCharacters);
       return arrayCharacters;
     }
-   const arrayCharacters = listCharacters(data.results);
+  listCharacters(data.results);
+  let arrayCharacter = listCharacters(data.results);
 
+function printCharacter(character){
+  for (let [key, value] of Object.entries(character)){
+    console.log(key + " "+ value);  
+  }
+  return;
+}
+printCharacter(arrayCharacter[0]);
 
-//Para criar listas usar HTML DOM createElement() Method
-//inserir informações na lista innerHTML 
+function setPositionCharacter(arrayCharacter){
+    let index;
+    let arrayCharcodes=[];
+    for(index in arrayCharacter){ 
+      arrayCharcodes.push(arrayCharacter.charCodeAt(index));
+      console.log(arrayCharcodes)
+    }
+    return arrayCharcodes;
+}
+setPositionCharacter(arrayCharacter); 
 
 
