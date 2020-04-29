@@ -11,25 +11,16 @@
     text-decoration: none;
 }
 .image-principal {
-    position: absolute;
-    left: 290px;
-    top: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 .text-principal{
-    position: absolute;
-    width: 1000px;
-    height: 201px;
-    left: 180px;
-    top: 500px;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 41px;
     text-align: center;
-    letter-spacing: 0.1em;
     color: #205B2F;
-}
-.footer-main{
-    margin-top: 600px;
 }
