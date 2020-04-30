@@ -3,17 +3,12 @@ body{
 }
 .main-menu{
     background-color: #2D9245;
+    border-radius: 1%;
 }
 .footer-main{
     background-color: #2D9245;
     display: block;
 }
-.button-home{
-    color:white;
-    position: relative;
-    top: 40%;
-    left: 50%;
-    font-family: questrial;
-    font-size: 20px;
-    text-decoration: none;
+.img-logo{
+    width: 18%;
 }
