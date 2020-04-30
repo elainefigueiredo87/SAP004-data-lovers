@@ -8,7 +8,3 @@ function printCharacter(characterList){
   return;
 }
 printCharacter(data.results);
-
-
-
-
