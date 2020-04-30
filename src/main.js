@@ -21,7 +21,13 @@ function printCharacter(character){
 //CRIA O ITEM DA LISTA
 function createListItem(character){
 	let listItem = document.createElement("li");
+	listItem.classList.add("character-information");
 	document.getElementById("characters-list").appendChild(listItem);
+	let img = document.createElement('img'); 
+	img.classList.add("character-img")
+	img.src = character.image;
+	listItem.appendChild(img)
+
 	return listItem;
 }
 
