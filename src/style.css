@@ -12,9 +12,11 @@ body{
 .footer-main{
     background-color: #05A626;
     display: block;
-    position:absolute;
+    position:fixed;
+    bottom: 0;
     width: 100%;
     left: 0%;
+
 }
 .img-logo{
     width: 18%;
