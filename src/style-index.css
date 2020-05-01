@@ -1,20 +1,6 @@
 .image-principal {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
-.text-principal{
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 41px;
-    text-align: center;
-    color: #205B2F;
-}
-.button-img-character{
-    width: 5%;
-    position: relative;
-    top: 40%;
-    left: 76%;
-}
+
