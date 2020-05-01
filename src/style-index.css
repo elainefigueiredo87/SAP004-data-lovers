@@ -5,7 +5,7 @@
 }
 .text-principal{
     font-family: Questrial;
-    font-style: normal;
+    font-style: margin-top: 50;normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 41px;
@@ -13,7 +13,7 @@
     color: #205B2F;
 }
 .button-img-character{
-    width: 5%;
+    width: 4.5%;
     position: relative;
     top: 40%;
     left: 76%;
