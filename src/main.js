@@ -8,7 +8,7 @@ getCharacters(data.results);
 
 function printCharacter(character){
 	let listItem = createListItem(character);
-	listItem.innerHTML += "Status:" + " " + character.status + "<br /> ";
+	listItem.innerHTML += "<br/> Status:" + " " + character.status + "<br /> ";
 	listItem.innerHTML += "Name:" + " " + character.name + "<br /> ";
 	listItem.innerHTML += "Specie:" + " " + character.species + "<br /> ";
 	listItem.innerHTML += "Gender:" + " " + character.gender + "<br />";
