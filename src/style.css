@@ -4,6 +4,11 @@ body{
 .main-menu{
     background-color: #2D9245;
     border-radius: 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+        
 }
 .footer-main{
     background-color: #2D9245;
