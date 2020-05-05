@@ -31,3 +31,12 @@
 .button-home-icon{
     width: 3%;
 }
+.filter { 
+    bottom: inherit;
+    float: right;
+    margin-right: 17%;
+    margin-top: 3.2%;
+   
+
+
+}
