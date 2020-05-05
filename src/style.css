@@ -1,8 +1,8 @@
 body{
-    background-color:#D3DF62;
+    background-color:#D2E054;
 }
 .main-menu{
-    background-color:#05A626;
+    background-color: #2D9245;
     border-radius: 1%;
     position: fixed;
     top: 0;
@@ -10,9 +10,10 @@ body{
     right: 0;       
 }
 .footer-main{
-    background-color: #05A626;
+    background-color: #2D9245;
     display: block;
-    position:absolute;
+    position:fixed;
+    bottom: 0;
     width: 100%;
     left: 0%;
 }
