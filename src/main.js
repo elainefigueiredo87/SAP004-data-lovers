@@ -1,11 +1,12 @@
 import data from './data/rickandmorty/rickandmorty.js';
-function getCharacters(characterList){
-	for (let character of characterList){
-	 	printCharacter(character);
+function getCharacters(characterList) {
+	for (let character of characterList) {
+		printCharacter(character);
 	}
 }
 getCharacters(data.results);
-function printCharacter(character){
+
+function printCharacter(character) {
 	let listItem = createListItem(character);
 	listItem.innerHTML += "<br/> Status:" + " " + character.status + "<br /> ";
 	listItem.innerHTML += "Name:" + " " + character.name + "<br /> ";
@@ -13,7 +14,7 @@ function printCharacter(character){
 	listItem.innerHTML += "Gender:" + " " + character.gender + "<br />";
 	listItem.innerHTML += "Origin:" + " " + character.origin.name + "<br />";
 }
-function createListItem(character){
+function createListItem(character) {
 	let listItem = document.createElement("li");
 	listItem.classList.add("character-information");
 	document.getElementById("characters-list").appendChild(listItem);
