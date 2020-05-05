@@ -5,7 +5,6 @@ function getCharacters(characterList){
 	}
 }
 getCharacters(data.results);
-
 function printCharacter(character){
 	let listItem = createListItem(character);
 	listItem.innerHTML += "<br/> Status:" + " " + character.status + "<br /> ";
@@ -18,13 +17,16 @@ function createListItem(character){
 	let listItem = document.createElement("li");
 	listItem.classList.add("character-information");
 	document.getElementById("characters-list").appendChild(listItem);
+	let divText = document.createElement("div");
+	divText.classList.add("div-text");
+	let divImg = document.createElement("div-img")
+	listItem.appendChild(divImg);
 	let img = document.createElement('img'); 
 	img.classList.add("character-img")
 	img.src = character.image;
-	listItem.appendChild(img)
+	divImg.appendChild(img);
 
 	return listItem;
 }
-//implementar lógica de episódios 
 
 
