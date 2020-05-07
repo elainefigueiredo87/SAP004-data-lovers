@@ -1,11 +1,12 @@
 import data from './data/rickandmorty/rickandmorty.js';
+import {filterData, sortData, computeStatus} from './data.js'
+
 function getCharacters(characterList) {
 	for (let character of characterList) {
 		printCharacter(character);
 	}
 }
 getCharacters(data.results);
-
 function printCharacter(character) {
 	let listItem = createListItem(character);
 	listItem.innerHTML += "<br/> Status:" + " " + character.status + "<br /> ";
@@ -27,7 +28,26 @@ function createListItem(character) {
 	img.src = character.image;
 	divImg.appendChild(img);
 
-	return listItem;
+	return listItem;	
 }
+function getFilterCharacters(characterList, condition){
+	clearList();
+	let filterResult = filterData(characterList, condition);
+	getCharacters(filterResult);
+} 
+function clearList(){
+	document.getElementById("characters-list").innerHTML = ""
+}
+function orderCharacters(characterList){
+	clearList();
+	 let orderResult = sortData(characterList);
+	 getCharacters(orderResult);
+}
+let selectOptions = document.getElementById("select-options");
+selectOptions.addEventListener("change", function(){getFilterCharacters(data.results, selectOptions.value)}); 
 
+let order = document.getElementById("button-order-characters");
+order.addEventListener("click", function(){orderCharacters(data.results)});
 
+let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
+let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
