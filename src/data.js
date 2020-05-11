@@ -14,15 +14,9 @@ export function filterData(data, condition){
     return dataFilter;
 }
 export function sortData(data, sortBy, sortOrder){
-    return data.sort(function (a, b) {
-        if (a.name > b.name) {
-          return 1;
-        }
-        if (a.name < b.name) {
-          return -1;
-        }
-        return 0;
-      });
+    return data.sort(function (a, b){
+        return a.name < b.name? -1 : a.name > b.name? 1 : 0;
+    });
 }
 function checkAlive(character){
     return character.status == "Alive"
