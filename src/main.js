@@ -38,16 +38,16 @@ function getFilterCharacters(characterList, condition){
 function clearList(){
 	document.getElementById("characters-list").innerHTML = ""
 }
-function orderCharacters(characterList){
+function orderCharacters(characterList, condition){
 	clearList();
-	 let orderResult = sortData(characterList);
+	 let orderResult = sortData(characterList, condition);
 	 getCharacters(orderResult);
 }
 let selectOptions = document.getElementById("select-options");
 selectOptions.addEventListener("change", function(){getFilterCharacters(data.results, selectOptions.value)}); 
 
 let order = document.getElementById("button-order-characters");
-order.addEventListener("click", function(){orderCharacters(data.results)});
+order.addEventListener("change", function(){orderCharacters(data.results, order.value)});
 
 let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
 let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
