@@ -13,18 +13,35 @@
   <header class="main-menu">
     <img class="img-logo" src="img/logo.png">
     <select id="select-options" class="filter" name="select">
-      <option>Filter characters</option>
+      <option value="filter">Filter characters</option>
       <optgroup label="Species">
         <option value="human">Human</option>
         <option value="alien">Alien</option>
+        <option value="unknown">Unknown</option>
+      </optgroup>
+      <optgroup label="Status">
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown-status">Unknown</option>
+      </optgroup>
+      <optgroup label="Gender">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="unknown-gender">Unknown</option>
       </optgroup>
     </select>
-    <button class="order-button" id="button-order-characters">Order characters</button>
-    <a class="button-home" href="index.html"><img class=button-home-icon src="img/home.svg" /></a>
-    <div class="paragrafo">
+    <select id="button-order-characters" class="order-button">
+      <optgroup label="Filter characters">
+        <option>Filter</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </optgroup>
+    </select>
+     <div class="paragrafo">
       <p class="alive-count" id="count-alive"></p>
       <p class="dead-count" id="count-dead"></p>
     </div>
+    <a class="button-home" href="index.html"><img class=button-home-icon src="img/home.svg" /></a>
   </header>
   <ul id="characters-list" class="list-character">
 
