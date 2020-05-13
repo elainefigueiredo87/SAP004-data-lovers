@@ -4,6 +4,37 @@
     margin-right: auto;
 }
 
+.balao2 {
+    margin-left: 67%;
+    bottom: 90px;
+    background: #2D9245;
+    font-family: "open sans";
+    font-size: 0.85em;
+    line-height: 1.6em;
+    border-radius: 15px;
+    width: 150px;
+    height: auto;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+}
+
+.balao2:after {
+    /*Triangulo*/
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+    /*Aqui entra a cor da "aba" do balão */
+    border-bottom: 20px solid #2D9245;
+    top: -20px;
+    /*localização. Experimente alterar para 'bottom'*/
+    left: 20%;
+}
+
 @media screen and (max-width: 500px) {
     .main-menu {
         background-color: #2D9245;
