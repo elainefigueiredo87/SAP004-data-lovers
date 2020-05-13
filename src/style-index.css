@@ -4,3 +4,67 @@
     margin-right: auto;
 }
 
+@media screen and (max-width: 500px) {
+    .main-menu {
+        background-color: #2D9245;
+        border-radius: 1%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .image-principal {
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img-logo {
+        width: 49%;
+    }
+    .footer-main {
+        background-color: #2D9245;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0%;
+    }
+    .balao2 {
+        bottom: 45px;
+        float: right;
+        margin: 0 auto;
+        background: #2D9245;
+        font-family: "open sans";
+        font-size: 0.85em;
+        line-height: 1.6em;
+        border-radius: 15px;
+        width: 150px;
+        height: auto;
+        color: #fff;
+        padding: 20px;
+        position: relative;
+    }
+    .balao2:after {
+        /*Triangulo*/
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+        /*Aqui entra a cor da "aba" do balão */
+        border-bottom: 20px solid #2D9245;
+        top: -20px;
+        /*localização. Experimente alterar para 'bottom'*/
+        left: 60%;
+    }
+    .all {
+        display: table;
+        /*coloquei uma classe no section e juntei a imagem ao balão. Pois quando dei um float 
+        no balão para conseguir posicioná-lo sobre a imagem, ele ficava solto na tela, aí com
+        o display table ele se torna parte integrante da caixa da imagem, isso me permite mover
+        o balão dentro da caixa da imagem*/
+    }
+}
