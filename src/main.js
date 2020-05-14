@@ -40,8 +40,8 @@ function clearList(){
 }
 function orderCharacters(characterList, condition){
 	clearList();
-	 let orderResult = sortData(characterList, condition);
-	 getCharacters(orderResult);
+	let orderResult = sortData(characterList, condition);
+	getCharacters(orderResult);
 }
 let selectOptions = document.getElementById("select-options");
 selectOptions.addEventListener("change", function(){getFilterCharacters(data.results, selectOptions.value)}); 
@@ -49,5 +49,5 @@ selectOptions.addEventListener("change", function(){getFilterCharacters(data.res
 let order = document.getElementById("button-order-characters");
 order.addEventListener("change", function(){orderCharacters(data.results, order.value)});
 
-let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
-let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
+document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
+document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
