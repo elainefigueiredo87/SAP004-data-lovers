@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {filterData, sortData, computeStatus} from './data.js'
+import { filterData, sortData } from './data.js'
 
 function getCharacters(characterList) {
 	for (let character of characterList) {
@@ -23,31 +23,31 @@ function createListItem(character) {
 	divText.classList.add("div-text");
 	let divImg = document.createElement("div-img")
 	listItem.appendChild(divImg);
-	let img = document.createElement('img'); 
+	let img = document.createElement('img');
 	img.classList.add("character-img")
 	img.src = character.image;
 	divImg.appendChild(img);
 
-	return listItem;	
+	return listItem;
 }
-function getFilterCharacters(characterList, condition){
+function getFilterCharacters(characterList, condition) {
 	clearList();
 	let filterResult = filterData(characterList, condition);
 	getCharacters(filterResult);
-} 
-function clearList(){
+}
+function clearList() {
 	document.getElementById("characters-list").innerHTML = ""
 }
-function orderCharacters(characterList, condition){
+function orderCharacters(characterList, condition) {
 	clearList();
-	 let orderResult = sortData(characterList, condition);
-	 getCharacters(orderResult);
+	let orderResult = sortData(characterList, condition);
+	getCharacters(orderResult);
 }
 let selectOptions = document.getElementById("select-options");
-selectOptions.addEventListener("change", function(){getFilterCharacters(data.results, selectOptions.value)}); 
+selectOptions.addEventListener("change", function () { getFilterCharacters(data.results, selectOptions.value) });
 
 let order = document.getElementById("button-order-characters");
-order.addEventListener("change", function(){orderCharacters(data.results, order.value)});
+order.addEventListener("change", function () { orderCharacters(data.results, order.value) });
 
-let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
-let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
+/*let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
+let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;*/
