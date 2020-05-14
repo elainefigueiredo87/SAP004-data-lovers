@@ -49,9 +49,6 @@
     position: relative;
     top: 10%;
     left: 70%;
-}
-
-.button-home-icon {
     width: 3%;
     margin-top: 2%;
     margin-bottom: 1%;
@@ -105,7 +102,7 @@
         margin-left: 7%;
         margin-right: 7%;
     }
-    .button-home-icon {
+    .button-home {
         width: 8%;
         top: 2.5%;
         margin-bottom: 0px;
@@ -113,8 +110,6 @@
         left: 10px;
         margin-top: 2%;
         position: sticky;
-    }
-    .button-home {
         left: 6%
     }
     .list-character {
@@ -188,15 +183,13 @@
         margin-left: 7%;
         margin-right: 7%;
     }
-    .button-home-icon {
+    .button-home {
         width: 5%;
         top: 2.5%;
         margin-bottom: 0px;
         margin-left: 25%;
         margin-top: 2%;
         position: sticky;
-    }
-    .button-home {
-        left: 8%
+        left: 8%;
     }
 }
