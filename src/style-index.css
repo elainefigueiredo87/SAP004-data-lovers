@@ -8,8 +8,8 @@
     margin-left: 67%;
     bottom: 90px;
     background: #2D9245;
-    font-family: "open sans";
-    font-size: 0.85em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
     line-height: 1.6em;
     border-radius: 15px;
     width: 150px;
@@ -45,13 +45,17 @@
         right: 0;
     }
     .image-principal {
-        width: 300px;
+        width: 100%;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 12%;
     }
     .img-logo {
-        width: 49%;
+        width: 69%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .footer-main {
         background-color: #2D9245;
@@ -60,17 +64,24 @@
         bottom: 0;
         width: 100%;
         left: 0%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .links {
+        margin-right: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%
     }
     .balao2 {
-        bottom: 45px;
+        bottom: 4em;
         float: right;
         margin: 0 auto;
         background: #2D9245;
-        font-family: "open sans";
-        font-size: 0.85em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 90%;
         line-height: 1.6em;
-        border-radius: 15px;
-        width: 150px;
+        border-radius: 1em;
+        width: 110px;
         height: auto;
         color: #fff;
         padding: 20px;
@@ -97,5 +108,67 @@
         no balão para conseguir posicioná-lo sobre a imagem, ele ficava solto na tela, aí com
         o display table ele se torna parte integrante da caixa da imagem, isso me permite mover
         o balão dentro da caixa da imagem*/
+    }
+    li {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    .image-principal {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+    }
+    .img-logo {
+        width: 69%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .balao2 {
+        margin-left: 56%;
+        bottom: 10em;
+        background: #2D9245;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 150%;
+        line-height: 1.6em;
+        border-radius: 15px;
+        width: 37%;
+        height: 10%;
+        color: #fff;
+        padding: 20px;
+        position: absolute;
+    }
+    .balao2:after {
+        /*Triangulo*/
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+        /*Aqui entra a cor da "aba" do balão */
+        border-bottom: 20px solid #2D9245;
+        top: -20px;
+        /*localização. Experimente alterar para 'bottom'*/
+        left: 20%;
+    }
+    .footer-main {
+        background-color: #2D9245;
+        display: block;
+        height: 7%;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer-main a img {
+        margin: .5em;
+        width: 3.5em;
     }
 }

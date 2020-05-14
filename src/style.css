@@ -1,23 +1,32 @@
-body{
-    background-color:#D2E054;
+body {
+    background-color: rgba(187, 201, 64, 1);
 }
-.main-menu{
+
+.main-menu {
     background-color: #2D9245;
     border-radius: 1%;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;       
+    right: 0;
 }
-.footer-main{
+
+.img-logo {
+    width: 23%;
+}
+
+.footer-main {
     background-color: #2D9245;
     display: block;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: 100%;
     left: 0%;
-
+    display: flex;
+    justify-content: flex-end;
 }
-.img-logo{
-    width: 18%;
+
+.footer-main a img {
+    margin: .5em;
+    width: 2em;
 }
