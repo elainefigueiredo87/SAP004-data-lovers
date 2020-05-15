@@ -1,3 +1,4 @@
+
 import { filterData, sortData, computeStatus } from '../src/data.js';
 
 const data = [{
@@ -162,6 +163,7 @@ describe('filterData', () => {
 
   it('returns no alien characters', () => {
     expect(filterData(data,'alien')).toMatchObject([]);
+
   });
 
   it('returns no unknown characters', () => {
@@ -200,6 +202,7 @@ describe('filterData', () => {
     expect(filterData(data,'')).toMatchObject([]);
   });
 });
+
 
 describe('sortData', () => {
   it('is a function', () => {
