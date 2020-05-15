@@ -49,5 +49,7 @@ selectOptions.addEventListener("change", function () { getFilterCharacters(data.
 let order = document.getElementById("button-order-characters");
 order.addEventListener("change", function () { orderCharacters(data.results, order.value) });
 
-/*let countAlive = document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
-let countDead = document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;*/
+
+document.getElementById("count-alive").innerHTML = "Alive characters in all dimensions:" + " " + computeStatus(data.results).alive;
+document.getElementById("count-dead").innerHTML = "Dead characters in all dimensions:" + " " + computeStatus(data.results).dead;
+

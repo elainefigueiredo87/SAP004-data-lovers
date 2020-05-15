@@ -70,8 +70,8 @@ function checkDead(character){
     return character.status == "Dead"
 }
 export function computeStatus(data){
-   let countAlive = data.filter(checkAlive).length;
-   let countDead = data.filter(checkDead).length;
+    let countAlive = data.filter(checkAlive).length;
+    let countDead = data.filter(checkDead).length;
     let computedData = {"alive": countAlive, "dead": countDead}
     return computedData;
 }
