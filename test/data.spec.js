@@ -1,3 +1,4 @@
+
 import { filterData, sortData, computeStatus } from '../src/data.js';
 const data = [{
     "id": 1,
@@ -161,6 +162,7 @@ describe('filterData', () => {
 
   it('returns no alien characters', () => {
     expect(filterData(data,'alien')).toMatchObject([]);
+
   });
 
   it('returns no unknown characters', () => {
@@ -168,6 +170,7 @@ describe('filterData', () => {
   });
 
 });
+
 
 describe('sortData', () => {
   it('is a function', () => {
@@ -183,6 +186,7 @@ describe('sortData', () => {
    // const sortResultZa = [data[2], data[0], data[1]];
     //expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
   //});
+
 });
 
 describe('computeStatus', () => {
