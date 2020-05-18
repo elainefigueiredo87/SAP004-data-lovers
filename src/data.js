@@ -25,6 +25,9 @@ function checkGenderMale(character){
 function checkGenderUnknown(character){
     return character.gender == "unknown";
 }
+function returnAllCharacters(){
+    return true;
+}
 export function filterData(data, condition){
     let dataFilter = []
     if(condition == "human"){
@@ -45,6 +48,8 @@ export function filterData(data, condition){
         dataFilter = data.filter(checkGenderMale);
     }else if(condition == "unknown-gender"){
         dataFilter = data.filter(checkGenderUnknown);
+    }else{
+        dataFilter = data.filter(returnAllCharacters);
     }
     return dataFilter;
 }
@@ -53,6 +58,8 @@ export function sortData(data, condition){
         return data.sort((a,b)=> a.name < b.name ? -1 : 1)
     }else if(condition ==="z-a") {
         return data.sort((a,b)=> a.name < b.name ? 1 : -1)
+    }else{
+        return data;
     }
 }
 export function computeStatus(data, condition){

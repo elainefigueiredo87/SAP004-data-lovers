@@ -199,7 +199,7 @@ describe('filterData', () => {
   });
 
   it('returns', () => {
-    expect(filterData(data,'')).toMatchObject([]);
+    expect(filterData(data,'')).toMatchObject(data);
   });
 });
 
@@ -226,9 +226,9 @@ describe('sortData', () => {
     expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
   });
 
-  it('returns ordered (z-a) characthers', () => {
+  it('returns', () => {
     const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
-    expect(sortData(dataTeste, "")).toBe(undefined);
+    expect(sortData(dataTeste, "")).toBe(dataTeste);
   });
 });
 describe('computeStatus', () => {
