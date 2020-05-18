@@ -23,7 +23,7 @@ function checkGenderMale(character){
     return character.gender == "Male";
 }
 function checkGenderUnknown(character){
-    return character.gender == "unknown";
+    return character.gender == "unknown-gender";
 }
 export function filterData(data, condition){
     let dataFilter = []
@@ -37,8 +37,6 @@ export function filterData(data, condition){
         dataFilter = data.filter(checkStatusAlive);
     }else if(condition == "dead"){
         dataFilter = data.filter(checkStatusDead);
-    }else if(condition == "unknown"){
-        dataFilter = data.filter(checkStatusDead); 
     }else if(condition == "unknown-status"){
         dataFilter = data.filter(checkStatusUnknown);
     }else if(condition == "female"){
@@ -50,17 +48,11 @@ export function filterData(data, condition){
     }
     return dataFilter;
 }
-function sortAz (a, b){
-    return a.name < b.name? -1 : a.name > b.name? 1 : 0;
-}
-function sortZa (a,b){
-    return a.name < b.name ? 1 : a.name > b.name ? -1 : 0;
-}
 export function sortData(data, condition){
-    if(condition == "a-z"){
-        return data.sort(sortAz)
-    }else if(condition == "z-a"){
-        return data.sort(sortZa);
+    if(condition === "a-z"){
+        return data.sort((a,b)=> a.name < b.name ? -1 : 1)
+    }else if(condition ==="z-a") {
+        return data.sort((a,b)=> a.name < b.name ? 1 : -1)
     }
 }
 function checkAlive(character){
