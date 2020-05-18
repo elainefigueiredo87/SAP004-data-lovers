@@ -231,7 +231,14 @@ describe('sortData', () => {
     expect(sortData(dataTeste, "")).toBe(undefined);
   });
 
-});
+
+
+  //it('returns ordered (z-a) characthers', () => {
+   // const sortResultZa = [data[2], data[0], data[1]];
+    //expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
+  //});
+
+
 
 describe('computeStatus', () => {
   it('is a function', () => {
