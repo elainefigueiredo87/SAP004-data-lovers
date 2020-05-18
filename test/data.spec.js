@@ -270,7 +270,7 @@ describe('computeStatus', () => {
   });
 
   it('returns 0 unknown-gender characters', () => {
-    expect(computeStatus(data,'unknown-gender')).tobe(0);
+    expect(computeStatus(data,'unknown-gender')).toBe(0);
   });
 
   it('returns', () => {
@@ -316,7 +316,7 @@ describe('computeStatusPorcentage', () => {
   });
 
   it('returns 0% unknown-gender characters', () => {
-    expect(computeStatusPorcentage(data,'unknown-gender')).tobe(0);
+    expect(computeStatusPorcentage(data,'unknown-gender')).toBe(0);
   });
 
   it('returns', () => {
