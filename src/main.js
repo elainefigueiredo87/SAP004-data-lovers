@@ -1,6 +1,7 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import { filterData, sortData, computeStatus } from './data.js'
 
+
 function getCharacters(characterList) {
 	for (let character of characterList) {
 		printCharacter(character);
