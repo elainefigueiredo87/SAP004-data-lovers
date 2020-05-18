@@ -231,7 +231,6 @@ describe('sortData', () => {
     expect(sortData(dataTeste, "")).toBe(undefined);
   });
 });
-
 describe('computeStatus', () => {
   it('is a function', () => {
     expect(typeof computeStatus).toBe('function');
