@@ -1,5 +1,6 @@
 
 import { filterData, sortData, computeStatus } from '../src/data.js';
+
 const data = [{
     "id": 1,
     "name": "Rick Sanchez",
@@ -169,6 +170,37 @@ describe('filterData', () => {
     expect(filterData(data,'unknown')).toMatchObject([]);
   });
 
+  it('returns alive characters', () => {
+    expect(filterData(data,'alive')).toMatchObject(data);
+  });
+
+  it('returns no dead characters', () => {
+    expect(filterData(data,'dead')).toMatchObject([]);
+  });
+
+  it('returns no unknown-status characters', () => {
+    expect(filterData(data,'unknown-status')).toMatchObject([]);
+  });
+  
+  it('returns Summer character(Female)', () => {
+    expect(filterData(data,'female')[0].name).toBe("Summer Smith");
+  });
+
+  it('returns Morty character(Male)', () => {
+    expect(filterData(data,'male')[0].name).toBe("Rick Sanchez");
+  });
+
+  it('returns Rick character(Male)', () => {
+    expect(filterData(data,'male')[1].name).toBe("Morty Smith");
+  });
+
+  it('returns no unknown-gender characters', () => {
+    expect(filterData(data,'unknown-gender')).toMatchObject([]);
+  });
+
+  it('returns', () => {
+    expect(filterData(data,'')).toMatchObject([]);
+  });
 });
 
 
@@ -177,16 +209,27 @@ describe('sortData', () => {
     expect(typeof sortData).toBe('function');
   });
 
-  it('returns ordered (a-z) characthers', () => {
-    const sortResultAz= [data[1], data[0], data[2]];
-    expect(sortData(data, "a-z")).toMatchObject(sortResultAz);
+  it('returns ordered (z-a) characthers', () => {
+    const sortResultZa = [data[2], data[0], data[1]];
+    expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
   });
 
-  //it('returns ordered (z-a) characthers', () => {
-   // const sortResultZa = [data[2], data[0], data[1]];
-    //expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
-  //});
+  it('returns ordered (a-z) characthers', () => {
+    const dataTeste = [{name:"paloma"},{name: "camila"}, {name: "elaine"}]
+    const sortResultAz= [dataTeste[1], dataTeste[2], dataTeste[0]];
+    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
+  });
 
+  it('returns ordered (a-z) characthers', () => {
+    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
+    const sortResultAz= [dataTeste[0], dataTeste[2], dataTeste[1]];
+    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
+  });
+
+  it('returns ordered (z-a) characthers', () => {
+    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
+    expect(sortData(dataTeste, "")).toBe(undefined);
+  });
 });
 
 describe('computeStatus', () => {
