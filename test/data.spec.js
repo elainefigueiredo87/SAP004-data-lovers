@@ -214,21 +214,13 @@ describe('sortData', () => {
     expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
   });
 
-  it('returns ordered (a-z) characthers', () => {
-    const dataTeste = [{name:"paloma"},{name: "camila"}, {name: "elaine"}]
-    const sortResultAz= [dataTeste[1], dataTeste[2], dataTeste[0]];
-    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
-  });
-
-  it('returns ordered (a-z) characthers', () => {
-    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
-    const sortResultAz= [dataTeste[0], dataTeste[2], dataTeste[1]];
-    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
+  it('returns ordered (a-z) characthers', () => { 
+    const sortResultAz= [data[1], data[0], data[2]];
+    expect(sortData(data, "a-z")).toMatchObject(sortResultAz);
   });
 
   it('returns', () => {
-    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
-    expect(sortData(dataTeste, "")).toBe(dataTeste);
+    expect(sortData(data, "")).toBe(data);
   });
 });
 describe('computeStatus', () => {
