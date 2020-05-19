@@ -62,7 +62,7 @@ function getFilterCharacters(characterList, condition) {
 	}else if(condition =="unknown-status"){
 		document.getElementById("count").innerHTML = "Unknown specie characters in all dimensions:" + " " + computeStatus(data.results, condition);
 		document.getElementById("porcentage").innerHTML = "(" + " " + computeStatusPorcentage(data.results, condition) + " " + "%" +" " + ")";
-	}	
+	}
 }
 function clearList() {
 	document.getElementById("characters-list").innerHTML = ""
