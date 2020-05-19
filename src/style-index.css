@@ -1,18 +1,17 @@
 body {
-    max-width: 900px;
+    overflow-y: hidden;
 }
 
 .image-principal {
-    max-width: 100%;
     display: block;
+    margin-top: 7%;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+    margin-right: auto
 }
 
 .balao2 {
-    margin-left: 75%;
-    margin-bottom: 4%;
+    margin-left: 60%;
+    margin-bottom: 14%;
     bottom: 80px;
     background: #2D9245;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,32 +26,58 @@ body {
 }
 
 .balao2:after {
-    /*Triangulo*/
     content: "";
     width: 0;
     height: 0;
     position: absolute;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-    /*Aqui entra a cor da "aba" do balão */
     border-bottom: 20px solid #2D9245;
     top: -20px;
-    /*localização. Experimente alterar para 'bottom'*/
     left: 10%;
 }
 
-.all {
-    position: fixed;
-    margin-left: 18%;
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    .image-principal {
+        display: block;
+        margin-top: -2%;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .balao2 {
+        margin-left: 64%;
+        margin-bottom: 14%;
+        bottom: -15%;
+        background: #2D9245;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 85%;
+        line-height: 1.6em;
+        border-radius: 15px;
+        width: 150px;
+        height: auto;
+        color: #fff;
+        padding: 20px;
+        position: absolute;
+    }
+    .balao2:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #2D9245;
+        top: -20px;
+        left: 10%;
+    }
 }
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
     .image-principal {
         width: 90%;
         display: block;
-        margin-left: 0%;
-        margin-right: 10%;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: auto;
     }
     .img-logo {
@@ -62,12 +87,12 @@ body {
         margin-right: auto;
     }
     .balao2 {
-        margin-left: 60%;
-        bottom: 7em;
+        margin-left: 69%;
+        bottom: 30em;
         background: #2D9245;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 120%;
-        width: 38%;
+        width: 27%;
         color: #fff;
         padding: 1px;
         position: absolute;
@@ -81,11 +106,8 @@ body {
         position: absolute;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-        /*Aqui entra a cor da "aba" do balão */
         border-bottom: 20px solid #2D9245;
         top: -20px;
-        /*localização. Experimente alterar para 'bottom'*/
         left: 20%;
     }
     .footer-main {
@@ -103,8 +125,59 @@ body {
         margin: .5em;
         width: 2.5em;
     }
-    .all {
-        margin-left: 4%;
+}
+
+@media screen and (min-width: 501px) and (max-width: 999px) {
+    .image-principal {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+    }
+    .img-logo {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .balao2 {
+        margin-left: 69%;
+        bottom: 21em;
+        background: #2D9245;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 120%;
+        width: 27%;
+        color: #fff;
+        padding: 1px;
+        position: absolute;
+        text-align: center;
+    }
+    .balao2:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #2D9245;
+        top: -20px;
+        left: 20%;
+    }
+    .footer-main {
+        background-color: #2D9245;
+        display: block;
+        height: 5%;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer-main a img {
+        margin: .5em;
+        width: 2.5em;
     }
 }
 
@@ -144,13 +217,13 @@ body {
         margin-bottom: 2%
     }
     .balao2 {
-        bottom: 5em;
+        bottom: em;
         float: right;
         margin: 0 auto;
         background: #2D9245;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 90%;
-        width: 110px;
+        font-size: 80%;
+        width: 100px;
         height: auto;
         color: #fff;
         padding: 5px;
@@ -158,23 +231,15 @@ body {
         text-align: center;
     }
     .balao2:after {
-        /*Triangulo*/
         content: "";
         width: 0;
         height: 0;
         position: absolute;
-        border-left: 18px solid transparent;
-        border-right: 18px solid transparent;
-        /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-        /*Aqui entra a cor da "aba" do balão */
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
         border-bottom: 20px solid #2D9245;
         top: -20px;
-        /*localização. Experimente alterar para 'bottom'*/
         left: 60%;
-    }
-    .all {
-        position: fixed;
-        margin-left: auto;
     }
     li {
         margin: auto;
