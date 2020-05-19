@@ -54,12 +54,13 @@ export function filterData(data, condition){
     return dataFilter;
 }
 export function sortData(data, condition){
+    const novoArray = [...data]
     if(condition === "a-z"){
-        return data.sort((a,b)=> a.name < b.name ? -1 : 1)
+        return novoArray.sort((a,b)=> a.name < b.name ? -1 : 1)
     }else if(condition ==="z-a") {
-        return data.sort((a,b)=> a.name < b.name ? 1 : -1)
+        return novoArray.sort((a,b)=> a.name < b.name ? 1 : -1)
     }else{
-        return data;
+        return data; 
     }
 }
 export function computeStatus(data, condition){
